@@ -2,11 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <variable
-            name="Main"
-            type="com.example.mylab03_apps.MainActivity" />
-    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Constraint_layout"
@@ -14,7 +9,6 @@
         android:layout_height="638dp"
         android:orientation="vertical"
         tools:context=".MainActivity">
-
 
         <ImageView
             android:id="@+id/main_Image"
@@ -34,6 +28,8 @@
             android:layout_width="77dp"
             android:layout_height="74dp"
             android:contentDescription="@string/upperButton"
+            android:longClickable="false"
+            android:onClick="upperButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.952"
@@ -58,7 +54,7 @@
             app:layout_constraintEnd_toStartOf="@+id/upperButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/main_Image"
-            android:autofillHints="" />
+            android:autofillHints="@string/name" />
 
         <TextView
             android:id="@+id/textView_name"
@@ -72,7 +68,6 @@
             android:layout_marginBottom="387dp"
             android:text="@string/name"
             android:textSize="20sp"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/editText"
             app:layout_constraintStart_toStartOf="parent"
